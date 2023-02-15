@@ -81,30 +81,38 @@ section .content a {
     margin: 20px 0 10px;
 }
 
-/*menue*/
+/*menue button*/
 .menuToggle {
     position: fixed;
     top: 0;
     right: 0;
     width: 60px;
     height: 60px;
-   /*  background: #f60f20; */
-   background: #12a0a3 url(menu.png);
-   background-repeat: no-repeat;
-   background-position: center;
-   background-size: 30px;
-   cursor: pointer;
-   z-index: 1000;
+    /*  background: #f60f20; */
+    background: #12a0a3 url(menu.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 30px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.menuToggle.active {
+    background: #12a0a3 url(close.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 25px;
 }
 
 /*navBar*/
 .navigation {
     position: fixed;
     top: 0;
-    left: calc(100% - 60px);/*60px = width in socialBar*/
+    left: calc(100% - 60px); /*60px = width in socialBar*/
     width: 100%;
     height: 100%;
-    background: #fff;
+   /*  background: #fff; */
+   background: #F5F0ED;
     z-index: 999;
     display: flex;
     justify-content: center;
@@ -114,6 +122,10 @@ section .content a {
     -moz-transition: 0.2s;
     -ms-transition: 0.2s;
     -o-transition: 0.2s;
+}
+
+.navigation.active {
+    left: 0;
 }
 
 .navigation ul {
@@ -145,7 +157,7 @@ section .content a {
     left: 0;
     width: 60px;
     height: 100%;
-    border-right: 1px solid rgba(0,0,0,0.1);
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: center;
     align-items: center;
